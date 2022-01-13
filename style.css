@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  color: #ffffff;
+  transition: background-image 1s ease-in-out;
+  text-shadow: 
+		-0   -1px 0   #000000,
+		 0   -1px 0   #000000,
+		-0    1px 0   #000000,
+		 0    1px 0   #000000,
+		-1px -0   0   #000000,
+		 1px -0   0   #000000,
+		-1px  0   0   #000000,
+		 1px  0   0   #000000,
+		-1px -1px 0   #000000,
+		 1px -1px 0   #000000,
+		-1px  1px 0   #000000,
+		 1px  1px 0   #000000,
+		-1px -1px 0   #000000,
+		 1px -1px 0   #000000,
+		-1px  1px 0   #000000,
+		 1px  1px 0   #000000;
+}
+
+.time {
+  font-size: 8rem;
+  border-radius: 10px;
+}
+.date {
+  text-transform:capitalize;
+  font-size: 4rem;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.name {
+  display: inline-block;
+}
+
+.changeBg {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.changeBg:hover, .getQuote:hover  {
+  filter: grayscale(.2);
+}
+.changeBg:active,
+.changeBg:focus,
+.getQuote:active,
+.getQuote:focus {
+  outline: 0;
+}
+.changeBg:active{
+  transform: scale(1.05)
+}
+
+.blockQuote {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.quote {
+  font: 1.2rem Georgia, serif;
+  margin: auto;
+  padding: 0px;
+  border-radius: 1em;
+  color: white;
+  text-shadow: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.quote figcaption,
+.quote blockquote {
+  margin: 0.5em;
+}
+.quote figcaption {
+  text-align: right;
+}
+.getQuote {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 0 5px;
+  flex-shrink: 0;
+
+}
+
+.getQuote:active{
+  transform: scale(1.2)
+}
+
+.weather {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: white;
+  text-shadow: none;
+  max-width: 150px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+}
+.humidity, .wind {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .time {
+    font-size: 2.5rem;
+  }
+  .date {
+    font-size: 1.7rem;
+  }
+  h1 {
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 1.7rem;
+  }
+  h2 {
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 1.3rem;
+  }
+  .blockQuote {
+    font-size: 1rem;
+  }
+}
